@@ -6,8 +6,13 @@ app.get('', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
-  res.send('Your weather')
+ // Provide an object to send as JSON
+ res.send({
+ forecast: 'It is snowing',
+ location: 'Philadelphia'
+ })
 })
+
 
 app.listen(3000, () => {
   console.log('Server is up on port 3000.')
